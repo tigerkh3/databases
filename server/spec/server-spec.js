@@ -41,8 +41,11 @@ describe('Persistent Node Chat Server', () => {
       .then(() => {
         // Now if we look in the database, we should find the posted message there.
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
         /* TODO: You might have to change this test to get all the data from
-         * your message table, since this is schema-dependent. */
+        * your message table, since this is schema-dependent. */
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
         const queryString = 'SELECT * FROM messages';
         const queryArgs = [];
 
