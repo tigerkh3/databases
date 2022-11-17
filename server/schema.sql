@@ -16,26 +16,7 @@ CREATE TABLE messages (
 );
 
 /* Create other tables and define schemas for them here!
-Drop the database????*/
-CREATE TABLE room (
-  id INT,
-  roomname TEXT,
-  username TEXT,
-  messageText TEXT,
-  PRIMARY KEY(id)
-)
 
-CREATE TABLE messages/room (
-  id INT,
-  PRIMARY KEY(id)
-)
--- CREATE TABLE user (
---   id INT,
---   roomname TEXT,
---   username TEXT,
---   messageText TEXT,
---   PRIMARY KEY(id)
--- )
 
 
 /*  Execute this file from the command line by typing:
