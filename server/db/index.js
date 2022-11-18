@@ -9,19 +9,20 @@ var mysql = require('mysql2');
 // OR
 // user: 'root', password: 'some_password_you_created_at_install'
 
-
 var connection = mysql.createConnection({
-  host: 'localhost'
-  user: 'root',
-  password: '',
-  database: 'chat'
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'chat'
 });
 
-// open the MySQL connection
-connection.connect(err => {
-  if (err) {
-    throw error;
-  }
-  console.log("Successfully connected to the database");
-});
 
+// // open the MySQL connection
+// connection.connect(err => {
+//   if (err) {
+//     throw error;
+//   }
+//   console.log("Successfully connected to the database");
+// });
+
+module.exports = {connection}

@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS chat;
--- CREATE DATABASE chat;
+CREATE DATABASE chat;
 
 USE chat;
 
@@ -15,9 +15,14 @@ CREATE TABLE messages (
   -- sudo service mysql start
 );
 
-/* Create other tables and define schemas for them here!
+/* Create other tables and define schemas for them here!*/
 
-
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+  id INT,
+  user TEXT,
+  PRIMARY KEY(id)
+);
 
 /*  Execute this file from the command line by typing:
  *    mysql -u root < server/schema.sql
