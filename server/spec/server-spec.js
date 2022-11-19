@@ -61,6 +61,7 @@ describe('Persistent Node Chat Server', () => {
         });
       })
       .catch((err) => {
+        console.log('ERROR', err);
         throw err;
       });
   });

@@ -2,18 +2,20 @@ var db = require('../db');
 
 module.exports = {
   getAll: function () {}, // a function which produces all the messages
-  create: function (callback, infoWeNeedToPassIn) {
-    // we start here somehow get a call to our database
-    // take in the passed in information from controllers.messages
-    // and apply it to our database
+  create: function (messageObj, callback) {
+    // create variables for incoming data
+    var user = messageObj.body.username;
+    var message = messageObj.body.message;
+    var roomname = messageObj.body.roomname;
+    message = message.replace("\'", "\\'");
 
-    // db.query(`INSERT into users (user) VALUES ('${username}')`, (err, data) => {
-    //   if (err) {
-    //     console.log(err);
-    //   } else {
-    //     callback(null, data);
-    //   }
-    // });
+    db.connection.query(`INSERT INTO messages (username, messageText, roomname) VALUES ('${user}', '${message}', '${roomname}')`, (err, data) => {
+      if (err) {
+        console.log(err);
+      } else {
+        callback(null, data);
+      }
+    });
 
 
   } // a function which can be used to insert a message into the database

@@ -6,7 +6,7 @@ USE chat;
 DROP TABLE IF EXISTS messages;
 CREATE TABLE messages (
   /* Describe your table here.*/
-  id INT,
+  id int NOT NULL AUTO_INCREMENT,
   username TEXT,
   messageText TEXT,
   roomname TEXT,
@@ -19,7 +19,7 @@ CREATE TABLE messages (
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
-  id INT,
+  id int NOT NULL AUTO_INCREMENT,
   user TEXT,
   PRIMARY KEY(id)
 );

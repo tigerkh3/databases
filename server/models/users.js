@@ -14,10 +14,9 @@ module.exports = {
   },
   create: function (username, callback) {
     // sometype of database input stuff
-    console.log(username);
-    db.connection.query(`INSERT into users (user) VALUES ('${username}')`, (err, data) => {
+    db.connection.query(`INSERT INTO users (user) VALUES ('${username}')`, (err, data) => {
       if (err) {
-        callback(err);
+        console.log(err);
       } else {
         callback(null, data);
       }

@@ -9,11 +9,12 @@ module.exports = {
     // can't check for data at the moment for some reason
     models.users.create(username, (err, data) => {
       if (err) {
-        res.send('unable to add user');
+        console.log('unable to add user');
+        res.end();
       } else {
-        res.send('user added');
+        console.log('user added');
+        res.end();
       }
     });
   }
-
 };
